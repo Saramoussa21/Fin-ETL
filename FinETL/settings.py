@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-o=kj6dwy4y4-hz)0cl$@b45x=)p5ksapqtuckgmhg1%-aw7*jd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '4.234.139.229']
+ALLOWED_HOSTS = ['*']
+
 
 
 # Application definition
@@ -88,7 +89,7 @@ DATABASES = {
         'NAME': 'fintech',
         'USER': 'fin_admin',
         'PASSWORD': 'ERKoievh123dQ',
-        'HOST': 'localhost',
+        'HOST': '10.24.32.11',
         'PORT': '5432',
     }
 }
