@@ -166,5 +166,5 @@ Page Not Found (404) when accessing the application: Make sure the URLs are corr
 To run tests for the project, you can use the following command:
 
 ```sh
-python manage.py test
+python manage.py test appname
 ```
