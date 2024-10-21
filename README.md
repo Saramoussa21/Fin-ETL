@@ -23,14 +23,14 @@ git clone <repo-url>
 cd FinETL
 ```
 
-#### 2. Create a Virtual Environment
+### 2. Create a Virtual Environment
 
 ```sh
 python -m venv venv
 source venv/bin/activate  
 ```
 
-#### 3. Install Dependencies
+### 3. Install Dependencies
 
 ```sh
 pip install -r requirements.txt
@@ -38,7 +38,7 @@ Database Setup
 Create a PostgreSQL database and set up the credentials.
 ```
 
-### Migrations
+## Migrations
 Run migrations to set up the database schema:
 
 ```sh
@@ -48,7 +48,7 @@ python manage.py migrate
 
 ## Running the Project
 
-#### 1. Start the Django Development Server
+### 1. Start the Django Development Server
 To start the Django development server, run:
 
 ```sh
@@ -57,7 +57,7 @@ python manage.py runserver 0.0.0.0:8000
 
 Then, open your web browser and go to http://<your-ip>:8000/.
 
-#### 2. Create a Superuser for Admin Access
+### 2. Create a Superuser for Admin Access
 To access the Django admin panel, create a superuser:
 
 ```sh
@@ -70,7 +70,7 @@ After creating the superuser, open your browser and go to:
 http://<your-ip>:8000/admin
 ```
 
-### Running the ETL Process
+## Running the ETL Process
 Run the following management command to execute the ETL process:
 
 ```sh
@@ -79,13 +79,13 @@ python manage.py etl
 
 This command will initiate the ETL process that extracts, transforms, and loads data into your database.
 
-### API Usage
+## API Usage
 The project exposes a RESTful API that can be used to interact with financial data.
 
-#### Authentication
+### Authentication
 The API uses JWT (JSON Web Tokens) for authentication. You need to obtain a token before accessing the API.
 
-#### Obtain Access Token
+### Obtain Access Token
 Send a POST request to the /api/token/ endpoint with your credentials to obtain a JWT token:
 
 ```sh
@@ -93,7 +93,7 @@ POST /api/token/
 Refresh Token
 ```
 
-#### Use this endpoint to refresh your token:
+### Use this endpoint to refresh your token:
 
 ```sh
 POST /api/token/refresh/
@@ -101,13 +101,13 @@ POST /api/token/refresh/
 
 Available Endpoints
 Retrieve Transactions for a Client
-#### Send a GET request to the following endpoint:
+### Send a GET request to the following endpoint:
 
 ```sh
 GET /api/transactions/<client_id>/
 ```
 
-#### You need to pass the JWT token in the Authorization header as:
+### You need to pass the JWT token in the Authorization header as:
 
 ```sh
 Authorization: Bearer <your-access-token>
@@ -116,7 +116,7 @@ Authorization: Bearer <your-access-token>
 ## Running the Project with Docker
 There are two methods to run the project using Docker: Dockerfile and Docker Compose.
 
-#### Running with Dockerfile
+### Running with Dockerfile
 
 #### 1. Build the Docker Image
 
