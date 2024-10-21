@@ -34,11 +34,15 @@ source venv/bin/activate
 
 ```sh
 pip install -r requirements.txt
-Database Setup
-Create a PostgreSQL database and set up the credentials.
 ```
 
+## Database Setup
+
+Create a PostgreSQL database and set up the credentials.
+
+
 ## Migrations
+
 Run migrations to set up the database schema:
 
 ```sh
@@ -118,13 +122,13 @@ There are two methods to run the project using Docker: Dockerfile and Docker Com
 
 ### Running with Dockerfile
 
-#### 1. Build the Docker Image
+### 1. Build the Docker Image
 
 ```sh
 docker build -t django-fin-etl .
 ```
 
-#### 2.Run the Container
+### 2.Run the Container
 
 ```sh
 docker run -p 8000:8000 django-fin-etl
@@ -136,21 +140,20 @@ docker run -p 8000:8000 django-fin-etl
 http://<your-ip>:8000/
 ```
 
-## Running with Docker Compose
+### Running with Docker Compose
 
-#### 1. Create a docker-compose.yml File
+### 1. Create a docker-compose.yml File
 If you haven't already, create a docker-compose.yml file to define the services.
 
-#### 2. Run Docker Compose
+### 2. Run Docker Compose
 
 ```sh
 docker-compose up
 ```
-
 This will build and start all services defined in the docker-compose.yml file.
 
-Troubleshooting
-Common Issues
+## Troubleshooting
+
 Unable to connect to the database: Ensure that the PostgreSQL server is running and the credentials in the .env file are correct.
 
 Cannot access the application via the IP: Ensure that port 8000 is open on your firewall and network settings, and that ALLOWED_HOSTS in settings.py includes your IP address.
@@ -159,8 +162,7 @@ Error running Docker container: Ensure that no other container or service is usi
 
 Page Not Found (404) when accessing the application: Make sure the URLs are correctly defined in the urls.py file and that you are navigating to a valid endpoint.
 
-Additional Notes
-Running Tests
+## Running Tests
 To run tests for the project, you can use the following command:
 
 ```sh
